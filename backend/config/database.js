@@ -12,7 +12,7 @@ const  options = {
     };
     
     // Connect MongoDB Atlas using mongoose connect method
-    mongoose.connect("mongodb+srv://dbSaurabh:12345@cluster0.mw2dk.mongodb.net/ShopEcom?retryWrites=true&w=majority", options).then(() => {
+    mongoose.connect(process.env.DB_URL, options).then(() => {
     console.log("Database connection established!");
     },
     err  => {
